@@ -13,5 +13,14 @@ public class HandleBrowserRelatedTask extends DriverSetup{
         System.out.println("URL: "+ url);
 
        Thread.sleep(3000);
+
+       driver.manage().window().fullscreen();
+       Thread.sleep(3000);
+
+       driver.manage().window().minimize();
+       Thread.sleep(3000);
+
+       driver.manage().window().maximize();
+       Thread.sleep(3000);
     }
 }
