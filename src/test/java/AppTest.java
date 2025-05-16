@@ -7,12 +7,14 @@ public class AppTest extends DriverSetup {
     public void testWebPageLoad (){
 
         driver.get("https://www.google.com/");
+        System.out.println(driver.getCurrentUrl());
 
     }
     @Test
     public void testWebPageTitle(){
 
         driver.get("https://www.google.com/");
+        System.out.println(driver.getTitle());
 
     }
 
