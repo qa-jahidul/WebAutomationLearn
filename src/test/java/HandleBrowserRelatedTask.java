@@ -1,3 +1,4 @@
+import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
 import java.sql.Driver;
@@ -14,27 +15,33 @@ public class HandleBrowserRelatedTask extends DriverSetup{
 
         System.out.println("URL: "+ url);
 
-       Thread.sleep(3000);
+       Thread.sleep(1000);
 
        driver.manage().window().fullscreen();
-       Thread.sleep(3000);
+       Thread.sleep(1000);
 
        driver.manage().window().minimize();
-       Thread.sleep(3000);
+       Thread.sleep(1000);
 
        driver.manage().window().maximize();
-       Thread.sleep(3000);
+       Thread.sleep(1000);
 
        driver.navigate().to("https://www.facebook.com");
-       Thread.sleep(3000);
+       Thread.sleep(1000);
 
        driver.navigate().back();
-       Thread.sleep(3000);
+       Thread.sleep(1000);
 
        driver.navigate().forward();
-       Thread.sleep(3000);
+       Thread.sleep(1000);
 
        driver.navigate().refresh();
-       Thread.sleep(3000);
+       Thread.sleep(1000);
+
+       driver.switchTo().newWindow(WindowType.TAB);
+       driver.get("https://x.com");
+
+       driver.switchTo().newWindow(WindowType.WINDOW);
+       driver.get("https://www.instagram.com");
     }
 }
